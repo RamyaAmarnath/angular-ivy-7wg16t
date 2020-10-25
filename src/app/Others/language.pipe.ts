@@ -7,15 +7,23 @@ export class LanguagePipe implements PipeTransform {
   languageset = {
     ENGLISH: {
       HI: "Hi",
-      HELLO:'Hello'
+      HELLO: "Hello",
+      LOGIN: "Login"
     },
     TAMIL: {
       HI: "இருக்கிறது",
-      HELLO: "வணக்கம்"
+      HELLO: "வணக்கம்",
+      LOGIN: "T Login"
     },
     HINDI: {
       HI: "இருக்கிறது",
-      HELLO: "नमस्ते"
+      HELLO: "नमस्ते",
+      LOGIN: "H Login"
+    },
+    FRENCH: {
+      HI: "EST",
+      HELLO: "BONJOUR",
+      LOGIN: "F Login"
     }
   };
   transform(value: string, args?: string): any {
@@ -23,7 +31,7 @@ export class LanguagePipe implements PipeTransform {
     console.log(args);
     value = value.toUpperCase();
     // return "Maths";
-    let language = args? args: "TAMIL";
+    let language = args ? args : "TAMIL";
     if (this.languageset[language][value]) {
       return this.languageset[language][value];
     }
