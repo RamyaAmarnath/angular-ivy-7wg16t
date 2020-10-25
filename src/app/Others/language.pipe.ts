@@ -13,7 +13,7 @@ export class LanguagePipe implements PipeTransform {
     TAMIL: {
       HI: "இருக்கிறது",
       HELLO: "வணக்கம்",
-      LOGIN: "T Login"
+      LOGIN: "உள்நுழைய"
     },
     HINDI: {
       HI: "இருக்கிறது",
