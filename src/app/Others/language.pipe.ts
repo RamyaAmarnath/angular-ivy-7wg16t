@@ -31,7 +31,10 @@ export class LanguagePipe implements PipeTransform {
     console.log(args);
     value = value.toUpperCase();
     // return "Maths";
-    let language = args ? args : "TAMIL";
+    let language = args ? args : "FRENCH";
+    if (localStorage.getItem("Language")) {
+      language = localStorage.getItem("Language");
+    }
     if (this.languageset[language][value]) {
       return this.languageset[language][value];
     }
