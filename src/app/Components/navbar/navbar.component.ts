@@ -6,12 +6,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./navbar.component.css"]
 })
 export class NavbarComponent implements OnInit {
-  constructor() {
-    this.setLanguage();
-  }
+  constructor() {}
 
   ngOnInit() {}
-  setLanguage(): void {
-    localStorage.setItem("Language", "HINDI");
+  changeLanguage(): void {
+    console.log(event);
+    console.log((event.target as HTMLInputElement).value);
+    let language = String(
+      (event.target as HTMLInputElement).value
+    ).toUpperCase();
+    localStorage.setItem("Language", language);
+    window.location.reload();
   }
 }
