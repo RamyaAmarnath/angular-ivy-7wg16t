@@ -1,9 +1,10 @@
 <form class="loginForm" #f="ngForm" autocomplete="false">
 	<div class="form-group">
-			<small *ngIf="f.controls.username?.untouched && f.controls.username?.pristine">
+			<small *ngIf="f.controls.username?.untouched">
         Please enterusername!!
         </small>
-			<small *ngIf="f.controls.username?.touched && f.controls.username?.dirty">Please change username!!</small>
+			<small *ngIf="f.controls.username?.pristine">Please change username!!</small>
+      <small *ngIf="f.controls.username?.dirty">Please enter the username fully!!</small>
 		<label for="username">username</label>
 		<input type="text" ngModel name="username">
 
@@ -11,6 +12,7 @@
 		<div class="form-group">
 			<small *ngIf="f.controls.password?.untouched">Please enter password!!</small>
 			<small *ngIf="f.controls.password?.pristine">Please change password!!</small>
+      <small *ngIf="f.controls.password?.dirty">Please enter the password fully!!</small>
 			<label for="password">password</label>
 			<input type="password" ngModel name="password">
   </div>
