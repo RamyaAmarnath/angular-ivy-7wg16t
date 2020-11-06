@@ -1,7 +1,9 @@
 <form class="loginForm" #f="ngForm" autocomplete="false">
 	<div class="form-group">
-		<small *ngIf="f.controls.username?.untouched">Please enter user field!!</small>
-		<small *ngIf="f.controls.username?.pristine">Please change user field!!</small>
+			<small *ngIf="f.controls.username?.untouched && f.controls.username?.pristine">
+        Please enterusername!!
+        </small>
+			<small *ngIf="f.controls.username?.touched && f.controls.username?.dirty">Please change username!!</small>
 		<label for="username">username</label>
 		<input type="text" ngModel name="username">
 
