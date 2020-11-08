@@ -8,22 +8,26 @@ export class LanguagePipe implements PipeTransform {
     ENGLISH: {
       HI: "Hi",
       HELLO: "Hello",
-      LOGIN: "Login"
+      LOGIN: "Login",
+      SIGNUP: "Signup"
     },
     TAMIL: {
       HI: "இருக்கிறது",
       HELLO: "வணக்கம்",
-      LOGIN: "உள்நுழைய"
+      LOGIN: "உள்நுழைய",
+      SIGNUP: "பதிவுபெறுதல்"
     },
     HINDI: {
       HI: "இருக்கிறது",
       HELLO: "नमस्ते",
-      LOGIN: "H Login"
+      LOGIN: "H Login",
+      SIGNUP: "साइन अप करें"
     },
     FRENCH: {
       HI: "EST",
       HELLO: "BONJOUR",
-      LOGIN: "F Login"
+      LOGIN: "F Login",
+      SIGNUP: "s'inscrire"
     }
   };
   transform(value: string, args?: string): any {

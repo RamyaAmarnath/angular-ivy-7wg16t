@@ -4,7 +4,7 @@
 				{{'login' | language}}
 			</a></li>
 		<li><a routerLink="/signup">
-				signup
+				{{'signup' | language}}
 			</a></li>
 		<li><a routerLink="/dummy">
 				dummy
@@ -23,6 +23,7 @@
 			</a></li>
 		<li>
 			<select (change)="changeLanguage()">
+        <option value="Tamil">Choose one</option>
         <option value="Tamil">Tamil</option>
         <option value="English">English</option>
         <option value="Hindi">Hindi</option>
