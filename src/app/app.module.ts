@@ -10,6 +10,7 @@ import { LoginComponent } from "./Components/login/login.component";
 import { NavbarComponent } from "./Components/navbar/navbar.component";
 import { SignupComponent } from "./Components/signup/signup.component";
 import { DummyComponent } from "./Components/dummy/dummy.component";
+import { ErrorComponent } from './Components/error/error.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -20,7 +21,8 @@ import { DummyComponent } from "./Components/dummy/dummy.component";
     LoginComponent,
     NavbarComponent,
     SignupComponent,
-    DummyComponent
+    DummyComponent,
+    ErrorComponent
   ],
   bootstrap: [AppComponent]
 })
