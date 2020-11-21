@@ -1,28 +1,28 @@
 <nav>
 	<ul>
 		<li><a routerLink="/login">
-			<i class="fas fa-sign-in-alt"></i>	{{'login' | language}}
+				<i class="fas fa-sign-in-alt"></i> {{'login' | language}}
 			</a></li>
 		<li><a routerLink="/signup">
-				{{'signup' | language}}
+				<i class="fas fa-user-plus"></i> {{'signup' | language}}
 				<!-- {{'username' | language}},
 				{{'password' | language}},
 				{{'retype password' | language}} -->
 			</a></li>
 		<li><a routerLink="/dummy">
-				<i class="fas fa-house-user"></i> dummy
+				<i class="far fa-grin-tongue-wink"></i> dummy
 			</a></li>
 		<li><a routerLink="/error">
-				error
+				<i class="fas fa-exclamation-triangle"></i> error
 			</a></li>
 		<li><a>
-				contactus
+				<i class="far fa-id-badge"></i> contactus
 			</a></li>
 		<li><a>
-				Info
+			<i class="fas fa-info"></i>	Info
 			</a></li>
 		<li><a>
-				home
+				<i class="fas fa-home"></i> home
 			</a></li>
 		<li>
 			<select (change)="changeLanguage()">
