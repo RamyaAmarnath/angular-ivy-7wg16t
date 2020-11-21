@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<th>index</th>
+		<th>postId</th>
+		<th>email</th>
+		<th>body</th>
+		<th>name</th>
+		<th>id</th>
+	</tr>
+	<tr *ngFor="let comment of comments;index as i">
+		<td>{{i}}</td>
+		<td>{{comment.postId}}</td>
+		<td>{{comment.email}}</td>
+		<td>{{comment.body}}</td>
+		<td>{{comment.name}}</td>
+		<td>{{comment.id}}</td>
+	</tr>
+</table>

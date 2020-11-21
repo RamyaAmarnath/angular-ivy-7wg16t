@@ -11,6 +11,7 @@ import { NavbarComponent } from "./Components/navbar/navbar.component";
 import { SignupComponent } from "./Components/signup/signup.component";
 import { DummyComponent } from "./Components/dummy/dummy.component";
 import { ErrorComponent } from './Components/error/error.component';
+import { PaginationComponent } from './Components/pagination/pagination.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -22,7 +23,8 @@ import { ErrorComponent } from './Components/error/error.component';
     NavbarComponent,
     SignupComponent,
     DummyComponent,
-    ErrorComponent
+    ErrorComponent,
+    PaginationComponent
   ],
   bootstrap: [AppComponent]
 })
