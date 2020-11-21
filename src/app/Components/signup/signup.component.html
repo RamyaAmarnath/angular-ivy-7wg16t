@@ -1,17 +1,17 @@
-<form class="SignupForm">
-<div class="form-group">
-	<label for="username">username</label>
-	<input type="text">
-</div>
+<form class="SignupForm" #f>
 	<div class="form-group">
-		<label for="password">password</label>
-		<input type="password">
-  </div>
-  <div class="form-group">
-		<label for="re-type password">re-type password</label>
-		<input type="password">
-  </div>
+		<label for="username">username</label>
+		<input type="text">
+</div>
 		<div class="form-group">
-			<button (click)="submit(f)">submit</button>
-		</div>
-		</form>
+			<label for="password">password</label>
+			<input type="password">
+  </div>
+			<div class="form-group">
+				<label for="re-type password">re-type password</label>
+				<input type="password">
+  </div>
+				<div class="form-group">
+					<button (click)="submit(f)">submit</button>
+				</div>
+</form>

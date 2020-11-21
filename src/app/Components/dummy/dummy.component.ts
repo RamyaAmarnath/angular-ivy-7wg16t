@@ -10,6 +10,7 @@ export class DummyComponent implements OnInit {
   now = new Date();
   name = "Angular " + VERSION.major;
   showme = true;
+  list=[5,10,15,22,26,28];
   constructor() {}
 
   ngOnInit() {}

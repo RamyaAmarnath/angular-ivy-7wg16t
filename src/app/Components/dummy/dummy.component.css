@@ -1,0 +1,10 @@
+.error {
+  color: red;
+}
+.card {
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  background-color: teal;
+}

@@ -4,7 +4,7 @@
 <input type="text" [value]="hello">
 <button (click)="chsngeme()">change me</button>
 <hello name="{{ name }}"></hello>
-<p>
+<!-- <p>
 	Start editing to see some magic happen :)
 </p>
 <p>Parror!</p>
@@ -19,5 +19,8 @@
 <p>{{now | date:'short':'-5'}}</p>
 <p>{{'hi' | language:'ENGLISH'}}</p>
 <p>{{'hi' | language:'TAMIL'}}</p>
-<p>{{'Hello' | language:'HINDI'}}</p>
+<p>{{'Hello' | language:'HINDI'}}</p> -->
 <p *ngIf="showme">ngif directive</p>
+<p [hidden]="showme">hidden directive</p>
+<p [ngClass]="{'error':showme}">ng class directive</p>
+<div class="card">card</div>
