@@ -12,7 +12,7 @@ export class LanguagePipe implements PipeTransform {
       SIGNUP: "Signup",
       USERNAME: "Username",
       PASSWORD: "Password",
-      RETYPE PASSWORD: "Retype Password"
+      RETYPEPASSWORD: "Retype Password"
     },
     TAMIL: {
       HI: "இருக்கிறது",
@@ -21,7 +21,7 @@ export class LanguagePipe implements PipeTransform {
       SIGNUP: "பதிவுபெறுதல்",
       USERNAME: "பயனர்பெயர்",
       PASSWORD: "கடவுச்சொல்",
-      RETYPE PASSWORD: "கடவுச்சொல்லை மீண்டும் தட்டச்சு செய்க"
+      RETYPEPASSWORD: "கடவுச்சொல்லை மீண்டும் தட்டச்சு செய்க"
     },
     HINDI: {
       HI: "இருக்கிறது",
@@ -30,7 +30,7 @@ export class LanguagePipe implements PipeTransform {
       SIGNUP: "साइन अप करें",
       USERNAME: "उपयोगकर्ता नाम",
       PASSWORD: "कुंजिका",
-      RETYPE PASSWORD: "पासवर्ड फिर से लिखें"
+      RETYPEPASSWORD: "पासवर्ड फिर से लिखें"
     },
     FRENCH: {
       HI: "EST",
@@ -39,7 +39,7 @@ export class LanguagePipe implements PipeTransform {
       SIGNUP: "s'inscrire",
       USERNAME: "Nom d'utilisateur",
       PASSWORD: "Mot de passe",
-      RETYPE PASSWORD: "Retaper le mot de passe"
+      RETYPEPASSWORD: "Retaper le mot de passe"
     }
   };
   transform(value: string, args?: string): any {

@@ -9,11 +9,13 @@ export class DummyComponent implements OnInit {
   hello = "hi";
   now = new Date();
   name = "Angular " + VERSION.major;
+  showme = true;
   constructor() {}
 
   ngOnInit() {}
   chsngeme() {
     // alert('hi');
     this.hello = "boy";
+    this.showme = !this.showme;
   }
 }
