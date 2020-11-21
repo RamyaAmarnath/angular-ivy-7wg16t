@@ -1,19 +1,15 @@
-form class="SignupForm" #f="ngForm" autocomplete="false">
+<form class="SignupForm">
 <div class="form-group">
-	<small *ngIf="f.controls.username?.untouched">
-        Please enter username!!
-        </small>
-	<small *ngIf="f.controls.username?.pristine">Please change username!!</small>
 	<label for="username">username</label>
-	<input type="text" ngModel name="username">
-
-	</div>
+	<input type="text">
+</div>
 	<div class="form-group">
-		<small *ngIf="f.controls.password?.untouched">Please enter password!!</small>
-		<small *ngIf="f.controls.password?.pristine">Please change password!!</small>
-		<small *ngIf="f.controls.password?.dirty">Please enter the password fully!!</small>
 		<label for="password">password</label>
-		<input type="password" ngModel name="password">
+		<input type="password">
+  </div>
+  <div class="form-group">
+		<label for="re-type password">re-type password</label>
+		<input type="password">
   </div>
 		<div class="form-group">
 			<button (click)="submit(f)">submit</button>
