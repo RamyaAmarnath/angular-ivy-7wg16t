@@ -4053,6 +4053,36 @@ export class PaginationComponent implements OnInit {
     this.end = this.end + 10;
     this.filtercomments();
   }
+  one() {
+    console.log("one");
+    this.initial = 0;
+    this.end = 10;
+    this.filtercomments();
+  }
+  two() {
+    console.log("two");
+    this.initial = 10;
+    this.end = 20;
+    this.filtercomments();
+  }
+  three() {
+    console.log("three");
+    this.initial = 20;
+    this.end = 30;
+    this.filtercomments();
+  }
+  four() {
+    console.log("four");
+    this.initial = 30;
+    this.end = 40;
+    this.filtercomments();
+  }
+  five() {
+    console.log("five");
+    this.initial = 40;
+    this.end = 50;
+    this.filtercomments();
+  }
   filtercomments() {
     this.displayComments = this.comments.slice(this.initial, this.end);
   }
