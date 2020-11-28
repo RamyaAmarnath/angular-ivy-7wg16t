@@ -4033,7 +4033,21 @@ export class PaginationComponent implements OnInit {
         "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     }
   ];
-  constructor() {}
+  displayComments = [];
+  initial = 0;
+  end = 10;
+  constructor() {
+    this.filtercomments();
+  }
 
   ngOnInit() {}
+  previous() {
+    console.log("previous");
+  }
+  next() {
+    console.log("next");
+  }
+  filtercomments() {
+    this.displayComments = this.comments.slice(this.initial, this.end);
+  }
 }
