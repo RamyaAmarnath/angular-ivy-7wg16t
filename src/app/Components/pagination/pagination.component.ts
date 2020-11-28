@@ -4037,53 +4037,61 @@ export class PaginationComponent implements OnInit {
   initial = 0;
   end = 10;
   constructor() {
-    this.filtercomments();
+    this.filtercomments(1);
   }
 
   ngOnInit() {}
   previous() {
     console.log("previous");
-    this.initial = this.initial - 10;
-    this.end = this.end - 10;
-    this.filtercomments();
+    // this.initial = this.initial - 10;
+    // this.end = this.end - 10;
+    this.filtercomments(this.initial - 10);
   }
   next() {
     console.log("next");
-    this.initial = this.initial + 10;
-    this.end = this.end + 10;
-    this.filtercomments();
+    // this.initial = this.initial + 10;
+    // this.end = this.end + 10;
+    this.filtercomments(this.initial + 10);
   }
   one() {
     console.log("one");
-    this.initial = 0;
-    this.end = 10;
-    this.filtercomments();
+    // this.initial = 0;
+    // this.end = 10;
+    this.filtercomments(1);
   }
   two() {
     console.log("two");
-    this.initial = 10;
-    this.end = 20;
-    this.filtercomments();
+    // this.initial = 10;
+    // this.end = 20;
+    this.filtercomments(2);
   }
   three() {
     console.log("three");
-    this.initial = 20;
-    this.end = 30;
-    this.filtercomments();
+    // this.initial = 20;
+    // this.end = 30;
+    this.filtercomments(3);
   }
   four() {
     console.log("four");
-    this.initial = 30;
-    this.end = 40;
-    this.filtercomments();
+    // this.initial = 30;
+    // this.end = 40;
+    this.filtercomments(4);
   }
   five() {
     console.log("five");
-    this.initial = 40;
-    this.end = 50;
-    this.filtercomments();
+    // this.initial = 40;
+    // this.end = 50;
+    this.filtercomments(5);
   }
-  filtercomments() {
+  changepagelimit() {
+    console.log("changepagelimit");
+    console.log((event.target as HTMLInputElement).value);
+    // todo change pagelimit
+    this.one();
+  }
+  filtercomments(page: number) {
+    this.initial = (page - 1) * 10;
+    this.end = this.initial + 10;
     this.displayComments = this.comments.slice(this.initial, this.end);
   }
 }
