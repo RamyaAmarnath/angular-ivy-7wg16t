@@ -4043,9 +4043,15 @@ export class PaginationComponent implements OnInit {
   ngOnInit() {}
   previous() {
     console.log("previous");
+    this.initial = this.initial - 10;
+    this.end = this.end - 10;
+    this.filtercomments();
   }
   next() {
     console.log("next");
+    this.initial = this.initial + 10;
+    this.end = this.end + 10;
+    this.filtercomments();
   }
   filtercomments() {
     this.displayComments = this.comments.slice(this.initial, this.end);
