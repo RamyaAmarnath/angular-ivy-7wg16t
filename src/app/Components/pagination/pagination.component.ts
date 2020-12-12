@@ -4034,11 +4034,13 @@ export class PaginationComponent implements OnInit {
     }
   ];
   displayComments = [];
+  buttons = [];
   initial = 0;
   end = 10;
-  page=1;
+  page = 1;
   constructor() {
     this.filtercomments(1);
+    this.generatebuttons();
   }
 
   ngOnInit() {}
@@ -4091,9 +4093,15 @@ export class PaginationComponent implements OnInit {
     this.one();
   }
   filtercomments(page: number) {
-    this.page=page;
+    this.page = page;
     this.initial = (page - 1) * 10;
     this.end = this.initial + 10;
     this.displayComments = this.comments.slice(this.initial, this.end);
+  }
+  generatebuttons() {
+    let totalbuttons = 50;
+    for (let i = 1; i <= totalbuttons; i++) {
+      this.buttons.push(i);
+    }
   }
 }

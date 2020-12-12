@@ -1,10 +1,11 @@
 <div>
 	<button (click)="previous()">Previous</button>
-	<button (click)="one()" [ngClass]="{'active':page==1}">1</button>
-	<button (click)="two()" [ngClass]="{'active':page==2}">2</button>
-	<button (click)="three()" [ngClass]="{'active':page==3}">3</button>
-	<button (click)="four()" [ngClass]="{'active':page==4}">4</button>
-	<button (click)="five()" [ngClass]="{'active':page==5}">5</button>
+	<!-- <button (click)="filtercomments(1)" [ngClass]="{'active':page==1}">1</button>
+	<button (click)="filtercomments(2)" [ngClass]="{'active':page==2}">2</button>
+	<button (click)="filtercomments(3)" [ngClass]="{'active':page==3}">3</button>
+	<button (click)="filtercomments(4)" [ngClass]="{'active':page==4}">4</button>
+	<button (click)="filtercomments(5)" [ngClass]="{'active':page==5}">5</button> -->
+  <button *ngFor="let button of buttons" (click)="filtercomments(button)" [ngClass]="{'active':page==button}">{{button}} </button>
 	<button (click)="next()">Next</button>
 	<select (change)="changepagelimit()">
     <option>5</option>
