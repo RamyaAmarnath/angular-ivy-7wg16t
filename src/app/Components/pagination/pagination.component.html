@@ -1,10 +1,10 @@
 <div>
 	<button (click)="previous()">Previous</button>
-	<button (click)="one()">1</button>
-	<button (click)="two()">2</button>
-	<button (click)="three()">3</button>
-	<button (click)="four()">4</button>
-	<button (click)="five()">5</button>
+	<button (click)="one()" [ngClass]="{'active':page==1}">1</button>
+	<button (click)="two()" [ngClass]="{'active':page==2}">2</button>
+	<button (click)="three()" [ngClass]="{'active':page==3}">3</button>
+	<button (click)="four()" [ngClass]="{'active':page==4}">4</button>
+	<button (click)="five()" [ngClass]="{'active':page==5}">5</button>
 	<button (click)="next()">Next</button>
 	<select (change)="changepagelimit()">
     <option>5</option>
@@ -12,6 +12,7 @@
     <option>15</option>
     <option>20</option>
   </select>
+	<p>{{page}}</p>
 </div>
 <table>
 	<tr>

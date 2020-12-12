@@ -4036,6 +4036,7 @@ export class PaginationComponent implements OnInit {
   displayComments = [];
   initial = 0;
   end = 10;
+  page=1;
   constructor() {
     this.filtercomments(1);
   }
@@ -4045,13 +4046,13 @@ export class PaginationComponent implements OnInit {
     console.log("previous");
     // this.initial = this.initial - 10;
     // this.end = this.end - 10;
-    this.filtercomments(this.initial - 10);
+    this.filtercomments(this.page - 1);
   }
   next() {
     console.log("next");
     // this.initial = this.initial + 10;
     // this.end = this.end + 10;
-    this.filtercomments(this.initial + 10);
+    this.filtercomments(this.page + 1);
   }
   one() {
     console.log("one");
@@ -4090,6 +4091,7 @@ export class PaginationComponent implements OnInit {
     this.one();
   }
   filtercomments(page: number) {
+    this.page=page;
     this.initial = (page - 1) * 10;
     this.end = this.initial + 10;
     this.displayComments = this.comments.slice(this.initial, this.end);
