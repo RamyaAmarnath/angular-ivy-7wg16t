@@ -12,6 +12,8 @@ import { SignupComponent } from "./Components/signup/signup.component";
 import { DummyComponent } from "./Components/dummy/dummy.component";
 import { ErrorComponent } from './Components/error/error.component';
 import { PaginationComponent } from './Components/pagination/pagination.component';
+import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './Components/employee-detail/employee-detail.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -24,7 +26,9 @@ import { PaginationComponent } from './Components/pagination/pagination.componen
     SignupComponent,
     DummyComponent,
     ErrorComponent,
-    PaginationComponent
+    PaginationComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   bootstrap: [AppComponent]
 })
