@@ -7,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class EmployeeDetailComponent implements OnInit {
   employee = {
-    Name: "Aurora",
+    Name: "Ramya",
     Age: 53,
     Email: "ante.blandit@disparturient.ca",
     Street: "493 Iaculis Rd.",
