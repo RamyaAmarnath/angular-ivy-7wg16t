@@ -1,8 +1,17 @@
 .card {
   display: inline-block;
   background-color: rgb(43, 226, 217);
-  width: 210px;
+  /* width: 210px; */
   padding: 10px;
   border: 5px solid gray;
   margin: 10px;
+}
+.employeelist {
+  text-align: center;
+}
+.employeelist button {
+  margin: 6px;
+  padding: 6px;
+  background-color: brown;
+  color: white;
 }
