@@ -10,14 +10,15 @@ import { LoginComponent } from "./Components/login/login.component";
 import { NavbarComponent } from "./Components/navbar/navbar.component";
 import { SignupComponent } from "./Components/signup/signup.component";
 import { DummyComponent } from "./Components/dummy/dummy.component";
-import { ErrorComponent } from './Components/error/error.component';
-import { PaginationComponent } from './Components/pagination/pagination.component';
-import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
-import { EmployeeDetailComponent } from './Components/employee-detail/employee-detail.component';
-import { EmployeeService } from './Others/employee.service';
+import { ErrorComponent } from "./Components/error/error.component";
+import { PaginationComponent } from "./Components/pagination/pagination.component";
+import { EmployeeListComponent } from "./Components/employee-list/employee-list.component";
+import { EmployeeDetailComponent } from "./Components/employee-detail/employee-detail.component";
+import { EmployeeService } from "./Others/employee.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
   declarations: [
     AppComponent,
     HelloComponent,
