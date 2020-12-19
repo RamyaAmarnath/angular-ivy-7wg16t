@@ -14,6 +14,7 @@ import { ErrorComponent } from './Components/error/error.component';
 import { PaginationComponent } from './Components/pagination/pagination.component';
 import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './Components/employee-detail/employee-detail.component';
+import { EmployeeService } from './Others/employee.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule],
@@ -30,6 +31,7 @@ import { EmployeeDetailComponent } from './Components/employee-detail/employee-d
     EmployeeListComponent,
     EmployeeDetailComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [EmployeeService]
 })
 export class AppModule {}

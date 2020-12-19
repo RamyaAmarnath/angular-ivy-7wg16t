@@ -1,6 +1,6 @@
-<div class="card" *ngFor="let employee of employeelist">
+<div class="card" *ngFor="let employee of employeelist;index as i">
 	<img src="https://geetha96.github.io/assets/dummy.jpg" />
 	<p>{{employee.Name}}</p>
 	<p>1001</p>
-	<button routerLink="/employee-detail">view</button>
+	<button routerLink="/employee-detail" (click)="view(i)">view</button>
 </div>
