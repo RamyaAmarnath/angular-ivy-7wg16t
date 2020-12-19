@@ -1,8 +1,9 @@
 table {
   border: 1px solid black;
   width: 100%;
+  margin-top: 30px;
 }
-th{
+th {
   padding: 0.25rem;
   text-align: center;
   border: 1px solid black;
@@ -11,4 +12,21 @@ td {
   padding: 0.25rem;
   text-align: center;
   border: 1px solid black;
+}
+.card {
+  display: inline-block;
+  background-color: gray;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 10px;
+  text-align: center;
+}
+.cardstyle {
+  width: 30%;
+  display: inline-block;
+}
+.tablestyle {
+  width: 60%;
+  display: inline-block;
+  padding: 2px;
 }
