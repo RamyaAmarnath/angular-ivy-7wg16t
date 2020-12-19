@@ -4097,10 +4097,13 @@ export class PaginationComponent implements OnInit {
     this.initial = (page - 1) * 10;
     this.end = this.initial + 10;
     this.displayComments = this.comments.slice(this.initial, this.end);
+    this.generatebuttons();
   }
   generatebuttons() {
-    let totalbuttons = 50;
-    for (let i = 1; i <= totalbuttons; i++) {
+    let startbutton = this.page - 2 > 0 ? this.page - 2 : 1;
+    let totalbuttons = this.page + 2 <= 50 ? this.page + 2 : 50;
+    this.buttons = [];
+    for (let i = startbutton; i <= totalbuttons; i++) {
       this.buttons.push(i);
     }
   }
