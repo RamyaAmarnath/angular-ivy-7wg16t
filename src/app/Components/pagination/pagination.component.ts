@@ -17,6 +17,7 @@ export class PaginationComponent implements OnInit {
     this.http
       .get("https://jsonplaceholder.typicode.com/comments")
       .subscribe((data: any) => {
+        console.log(data);
         this.comments = data;
         this.filtercomments(1);
         this.generatebuttons();
