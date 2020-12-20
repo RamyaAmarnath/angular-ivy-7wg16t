@@ -26,22 +26,14 @@ export class TodoComponent implements OnInit {
       }
     }
   };
-  public pieChartLabels: Label[] = [
-    ["Download", "Sales"],
-    ["In", "Store", "Sales"],
-    "Mail Sales"
-  ];
-  public pieChartData: number[] = [300, 500, 100];
+  public pieChartLabels: Label[] = ["completed", "notcompleted"];
+  public pieChartData: number[] = [0, 0];
   public pieChartType: ChartType = "pie";
   public pieChartLegend = true;
   public pieChartPlugins = [pluginDataLabels];
   public pieChartColors = [
     {
-      backgroundColor: [
-        "rgba(255,0,0,0.3)",
-        "rgba(0,255,0,0.3)",
-        "rgba(0,0,255,0.3)"
-      ]
+      backgroundColor: ["rgba(255,0,0,0.3)", "rgba(0,255,0,0.3)"]
     }
   ];
   constructor(private http: HttpClient) {
@@ -49,6 +41,8 @@ export class TodoComponent implements OnInit {
       .get("https://jsonplaceholder.typicode.com/todos")
       .subscribe((data: any) => {
         console.log(data);
+        this.pieChartData[0] = 100; //completed
+        this.pieChartData[1] = 200; //not completed
       });
   }
 
