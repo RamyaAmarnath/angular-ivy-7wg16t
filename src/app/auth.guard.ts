@@ -8,7 +8,7 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  validuser = false;
+  validuser = true;
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
