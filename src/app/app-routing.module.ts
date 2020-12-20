@@ -8,15 +8,28 @@ import { PaginationComponent } from "./Components/pagination/pagination.componen
 import { EmployeeDetailComponent } from "./Components/employee-detail/employee-detail.component";
 import { EmployeeListComponent } from "./Components/employee-list/employee-list.component";
 import { TodoComponent } from "./Components/todo/todo.component";
+import { AuthGuard } from "./auth.guard";
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
-  { path: "dummy", component: DummyComponent },
+  { path: "dummy", component: DummyComponent, canActivate: [AuthGuard] },
   { path: "error", component: ErrorComponent },
-  { path: "pagination", component: PaginationComponent },
-  { path: "employee-list", component: EmployeeListComponent },
-  { path: "employee-detail", component: EmployeeDetailComponent },
-  { path: "todo", component: TodoComponent }
+  {
+    path: "pagination",
+    component: PaginationComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "employee-list",
+    component: EmployeeListComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: "employee-detail",
+    component: EmployeeDetailComponent,
+    canActivate: [AuthGuard]
+  },
+  { path: "todo", component: TodoComponent, canActivate: [AuthGuard] }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
