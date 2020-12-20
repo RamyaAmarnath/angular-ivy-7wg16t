@@ -17,6 +17,7 @@ import { EmployeeDetailComponent } from "./Components/employee-detail/employee-d
 import { EmployeeService } from "./Others/employee.service";
 import { HttpClientModule } from "@angular/common/http";
 import { TodoComponent } from "./Components/todo/todo.component";
+import { AuthGuard } from "./auth.guard";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
