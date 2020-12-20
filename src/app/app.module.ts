@@ -18,9 +18,16 @@ import { EmployeeService } from "./Others/employee.service";
 import { HttpClientModule } from "@angular/common/http";
 import { TodoComponent } from "./Components/todo/todo.component";
 import { AuthGuard } from "./auth.guard";
+import { ChartsModule } from "ng2-charts";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ChartsModule
+  ],
   declarations: [
     AppComponent,
     HelloComponent,
