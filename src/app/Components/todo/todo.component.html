@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="isdataloaded">
 	<div>
 		<div class="chart">
 			<canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
@@ -7,6 +7,9 @@
 			</canvas>
 		</div>
 	</div>
+</div>
+<div *ngIf="!isdataloaded">
+	<p class="loading">loading....</p>
 </div>
 <!-- <div>
 	<button mat-button mat-raised-button color="primary" (click)="pieChartLegend=!pieChartLegend">Toggle Legend</button>

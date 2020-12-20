@@ -36,13 +36,23 @@ export class TodoComponent implements OnInit {
       backgroundColor: ["rgba(255,0,0,0.3)", "rgba(0,255,0,0.3)"]
     }
   ];
+  public isdataloaded = false;
   constructor(private http: HttpClient) {
     this.http
       .get("https://jsonplaceholder.typicode.com/todos")
-      .subscribe((data: any) => {
+      .subscribe((data: any[]) => {
         console.log(data);
-        this.pieChartData[0] = 100; //completed
-        this.pieChartData[1] = 200; //not completed
+        // data.forEach(each => {
+        //   console.log(each);
+        //   each.completed ? this.pieChartData[0]++ : this.pieChartData[1]++;
+        // });
+        for (let i = 0; i < data.length; i++) {
+          console.log(data[i]);
+          data[i].completed ? this.pieChartData[0]++ : this.pieChartData[1]++;
+        }
+        // this.pieChartData[0] = 100; //completed
+        // this.pieChartData[1] = 200; //not completed
+        this.isdataloaded = true;
       });
   }
 
