@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AuthGuard } from "../../auth.guard";
 
 @Component({
   selector: "app-login",
@@ -6,11 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  constructor() {}
+  constructor(private auth: AuthGuard) {}
 
   ngOnInit() {}
 
-  login(f:any): void {
+  login(f: any): void {
     console.log(f);
+    if (f.value.username === "Ramya") {
+      this.auth.validuser = true;
+    }
   }
 }
