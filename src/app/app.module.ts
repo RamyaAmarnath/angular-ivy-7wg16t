@@ -16,7 +16,7 @@ import { EmployeeListComponent } from "./Components/employee-list/employee-list.
 import { EmployeeDetailComponent } from "./Components/employee-detail/employee-detail.component";
 import { EmployeeService } from "./Others/employee.service";
 import { HttpClientModule } from "@angular/common/http";
-import { TodoComponent } from './Components/todo/todo.component';
+import { TodoComponent } from "./Components/todo/todo.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
@@ -35,6 +35,6 @@ import { TodoComponent } from './Components/todo/todo.component';
     TodoComponent
   ],
   bootstrap: [AppComponent],
-  providers: [EmployeeService]
+  providers: [EmployeeService, AuthGuard]
 })
 export class AppModule {}
